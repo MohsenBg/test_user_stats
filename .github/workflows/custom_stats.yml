@@ -26,7 +26,6 @@ jobs:
 
     - name: Generate Pie Chart
       run: |
-        source chart_gen/.env/bin/activate
         python chart_gen/generate_stats.py MohsenBg test_user_stats
 
     - name: Commit and push changes
