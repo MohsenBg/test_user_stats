@@ -2,10 +2,9 @@ name: Generate Language Pie Chart
 
 on:
   push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    branches: [ main, master ]
+    schedule:
+      - cron: '0 0 * * *'  # Runs daily at midnight UTC
 
 jobs:
   build:
