@@ -31,9 +31,9 @@ jobs:
       run: |
         cd ./chart_gen
         python generate_stats.py MohsenBg test_user_stats
+        cd ..
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git
         git add .
         git diff --cached --quiet || git commit -m "Auto-update language pie chart"
         git push origin HEAD:main
