@@ -24,14 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r chart_gen/requirements.txt
 
-    - name: Generate Pie Chart
-      run: |
-        python chart_gen/generate_stats.py MohsenBg test_user_stats
-
-    - name: Commit and push changes
+    - name: Generate Pie Chart &  Commit and push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        python chart_gen/generate_stats.py MohsenBg test_user_stats
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add chart_gen/pie_chart.svg
