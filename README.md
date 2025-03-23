@@ -2,7 +2,7 @@
 This is a collection of the questions I've solved. You can check how I solve them, and if you have any questions or ideas 💡, feel free to share them with me! 
 
 ## custom one
-![cutom ](./pie_chart.svg)
+![custom](./chart_gen/pie_chart.svg)
 ## userstats
 ![My user statistics](images/userstats.svg)
 
