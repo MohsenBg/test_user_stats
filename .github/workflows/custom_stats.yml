@@ -31,6 +31,7 @@ jobs:
         python chart_gen/generate_stats.py MohsenBg test_user_stats
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add chart_gen/pie_chart.svg
+        git status
+        git add .
         git diff --cached --quiet || git commit -m "Auto-update language pie chart"
         git push origin HEAD:main
