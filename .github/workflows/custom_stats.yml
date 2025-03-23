@@ -1,0 +1,41 @@
+name: Generate Language Pie Chart
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r chart_gen/requirements.txt
+
+    - name: Generate Pie Chart
+      run: |
+        source chart_gen/.env/bin/activate
+        python chart_gen/generate_stats.py MohsenBg test_user_stats
+
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add chart_gen/pie_chart.svg
+        git diff --cached --quiet || git commit -m "Auto-update language pie chart"
+        git push origin HEAD:main
