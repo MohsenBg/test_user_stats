@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-03-23T15:55:14.899070</dc:date>
+    <dc:date>2025-03-23T15:57:34.732427</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -37,7 +37,7 @@ C 73.105702 255.42367 90.737454 275.489907 112.834011 289.531179
 C 134.930569 303.572451 160.585479 311.012752 186.765883 310.972508 
 L 186.554592 173.518111 
 z
-" style="fill: #59962c; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #80aae1; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 186.765905 310.972507 
@@ -45,7 +45,7 @@ C 222.35861 310.917786 256.574732 297.040494 282.150086 272.286818
 C 307.72544 247.533141 322.712292 213.788194 323.928836 178.216243 
 L 186.554592 173.518111 
 z
-" style="fill: #ed203f; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #5e6ede; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 323.928836 178.216243 
@@ -53,7 +53,7 @@ C 324.803718 152.634406 318.515693 127.309686 305.776399 105.108197
 C 293.037106 82.906712 274.34596 64.698875 251.818425 52.545441 
 L 186.554592 173.518111 
 z
-" style="fill: #2b3999; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #7bb9fb; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 251.818425 52.545441 
@@ -61,7 +61,7 @@ C 235.81993 43.914378 218.267044 38.542102 200.17835 36.740378
 C 182.089655 34.938646 163.821943 36.743008 146.435271 42.048741 
 L 186.554592 173.518111 
 z
-" style="fill: #70a0cf; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #0350ba; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 146.435271 42.048741 
@@ -69,7 +69,7 @@ C 133.781872 45.910061 121.752004 51.577971 110.718249 58.876913
 C 99.684494 66.175856 89.761995 75.029693 81.258275 85.164036 
 L 186.554592 173.518111 
 z
-" style="fill: #2f2884; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #fb5470; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>
@@ -494,7 +494,7 @@ L 31.2 345.918125
 L 31.2 333.718125 
 L 11.2 333.718125 
 z
-" style="fill: #59962c; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #80aae1; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_2">
      <!-- Zig (36.1%) -->
@@ -689,7 +689,7 @@ L 31.2 370.118125
 L 31.2 357.918125 
 L 11.2 357.918125 
 z
-" style="fill: #ed203f; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #5e6ede; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_3">
      <!-- Rust (24.4%) -->
@@ -759,7 +759,7 @@ L 143.914062 345.918125
 L 143.914062 333.718125 
 L 123.914063 333.718125 
 z
-" style="fill: #2b3999; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #7bb9fb; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_4">
      <!-- Assembly (17.7%) -->
@@ -853,7 +853,7 @@ L 143.914062 370.118125
 L 143.914062 357.918125 
 L 123.914063 357.918125 
 z
-" style="fill: #70a0cf; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #0350ba; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_5">
      <!-- C (12.6%) -->
@@ -898,7 +898,7 @@ L 282.860937 345.918125
 L 282.860937 333.718125 
 L 262.860937 333.718125 
 z
-" style="fill: #2f2884; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #fb5470; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_6">
      <!-- Python (9.2%) -->
