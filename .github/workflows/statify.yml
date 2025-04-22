@@ -7,27 +7,86 @@ on:
     branches: [ main ]
 
 env:
-  STATIFY_REPO: https://github.com/BarsamPazhohesh/Statify.git
+  STATIFY_REPO: BarsamPazhohesh/Statify   # Repo for Statify
+  STATIFY_PATH: Statify                   # Path to clone Statify
+  GO_VERSION: '>=1.23'                    # Go version
+  TARGET_INPUTS: |
+    .
+    jump_game
+    two_sum
+    two_sum_sorted
+    remove_duplicates_from_sorted_array
+  ANALYZED_OUTPUTS: |
+    analyzed
 
 jobs:
-  clone-and-run:
+  statify-analyze:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set TARGET_PATH from repository name
+        run: |
+          TARGET_PATH=$(basename "${{ github.repository }}")
+          echo "TARGET_PATH=$TARGET_PATH" >> $GITHUB_ENV
+
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+        with:
+          path: ${{ env.TARGET_PATH }}
+
+      - name: Checkout Statify repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.STATIFY_REPO }}
+          path: ${{ env.STATIFY_PATH }}
+
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '>=1.23'
+          go-version: ${{ env.GO_VERSION }}
 
-      - name: Clone Statify repository
+      - name: Set REPO_ROOT environment variable
+        run: echo "REPO_ROOT=$PWD" >> $GITHUB_ENV
+
+      - name: Build run arguments
         run: |
-          git clone $STATIFY_REPO
+          P_VALUES=""
+          while IFS= read -r INPUT_PATH; do
+            if [[ -n "$INPUT_PATH" ]]; then
+              P_VALUES="$P_VALUES -p $REPO_ROOT/${{ env.TARGET_PATH }}/$INPUT_PATH"
+            fi
+          done <<< "${{ env.TARGET_INPUTS }}"
 
-      - name: Run Statify analyze
+          OP_VALUES=""
+          while IFS= read -r OUT_PATH; do
+            if [[ -n "$OUT_PATH" ]]; then
+              OP_VALUES="$OP_VALUES --op $REPO_ROOT/${{ env.TARGET_PATH }}/$OUT_PATH"
+            fi
+          done <<< "${{ env.ANALYZED_OUTPUTS }}"
+
+          echo "RUN_ARGS=$P_VALUES $OP_VALUES" >> $GITHUB_ENV
+
+      - name: Run Statify analyzer
         run: |
-          go run ./Statify -p .
+          cd ${{ env.STATIFY_PATH }}
+          go run . $RUN_ARGS
 
-      - name: List analyzed folder contents (handle spaces)
+      - name: Show directory structure (up to 3 levels)
         run: |
-          find ./analyzed -type f -print0 | xargs -0 ls -lh
+          sudo apt-get update
+          sudo apt-get install tree -y
+          cd $REPO_ROOT
+          tree -L 3
 
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd $REPO_ROOT/${{ env.TARGET_PATH }}
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull origin main
+          git add .
+          git diff --cached --quiet || git commit -m "Auto-update by statify"
+          git push origin HEAD:main
