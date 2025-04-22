@@ -1,0 +1,33 @@
+name: Statify Analyze
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  STATIFY_REPO: https://github.com/BarsamPazhohesh/Statify.git
+
+jobs:
+  clone-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '>=1.23'
+
+      - name: Clone Statify repository
+        run: |
+          git clone $STATIFY_REPO
+
+      - name: Run Statify analyze
+        run: |
+          go run ./Statify -p .
+
+      - name: List analyzed folder contents (handle spaces)
+        run: |
+          find ./analyzed -type f -print0 | xargs -0 ls -lh
+
