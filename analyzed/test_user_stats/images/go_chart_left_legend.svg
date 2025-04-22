@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 680 500"><path  d="M 0 0
+L 680 0
+L 680 500
+L 0 500
+L 0 0" style="stroke-width:0;stroke:rgba(255,255,255,1.0);fill:rgba(255,255,255,1.0)"/><path  d="M 280 50
+L 655 50
+L 655 474
+L 280 474
+L 280 50" style="stroke-width:0;stroke:rgba(255,255,255,1.0);fill:rgba(255,255,255,1.0)"/><path  d="M 467 262
+L 654 262
+A 187 187 112.82 0 1 395 434
+L 467 262
+Z" style="stroke-width:3;stroke:rgba(255,255,255,1.0);fill:rgba(222,165,132,1.0)"/><path  d="M 467 262
+L 395 434
+A 187 187 90.07 0 1 295 190
+L 467 262
+Z" style="stroke-width:3;stroke:rgba(255,255,255,1.0);fill:rgba(236,145,92,1.0)"/><path  d="M 467 262
+L 295 190
+A 187 187 58.75 0 1 440 77
+L 467 262
+Z" style="stroke-width:3;stroke:rgba(255,255,255,1.0);fill:rgba(85,85,85,1.0)"/><path  d="M 467 262
+L 440 77
+A 187 187 53.93 0 1 600 132
+L 467 262
+Z" style="stroke-width:3;stroke:rgba(255,255,255,1.0);fill:rgba(110,76,19,1.0)"/><path  d="M 467 262
+L 600 132
+A 187 187 44.32 0 1 653 262
+L 467 262
+Z" style="stroke-width:3;stroke:rgba(255,255,255,1.0);fill:rgba(53,114,165,1.0)"/><text x="239" y="30" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:20.4px;font-family:'Roboto Medium',sans-serif">Language Distribution</text><path  d="M 50 187
+L 70 187
+L 70 207
+L 50 207
+L 50 187" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(222,165,132,1.0)"/><text x="80" y="201" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">Rust 31.3%</text><path  d="M 50 212
+L 70 212
+L 70 232
+L 50 232
+L 50 212" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(236,145,92,1.0)"/><text x="80" y="226" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">Zig 25.0%</text><path  d="M 50 237
+L 70 237
+L 70 257
+L 50 257
+L 50 237" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(85,85,85,1.0)"/><text x="80" y="251" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">C 16.3%</text><path  d="M 50 262
+L 70 262
+L 70 282
+L 50 282
+L 50 262" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(110,76,19,1.0)"/><text x="80" y="276" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">Assembly 15.0%</text><path  d="M 50 287
+L 70 287
+L 70 307
+L 50 307
+L 50 287" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(53,114,165,1.0)"/><text x="80" y="301" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">Python 12.3%</text></svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 575"><path  d="M 0 0
+L 600 0
+L 600 575
+L 0 575
+L 0 0" style="stroke-width:0;stroke:rgba(255,255,255,1.0);fill:rgba(255,255,255,1.0)"/><path  d="M 25 50
+L 575 50
+L 575 450
+L 25 450
+L 25 50" style="stroke-width:0;stroke:rgba(255,255,255,1.0);fill:rgba(255,255,255,1.0)"/><circle cx="300" cy="250" r="200" style="stroke-width:5;stroke:rgba(255,255,255,1.0);fill:rgba(106,195,203,1.0)"/><text x="199" y="30" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:20.4px;font-family:'Roboto Medium',sans-serif">Language Distribution</text><path  d="M 300 250
+M 50 500
+L 70 500
+L 70 520
+L 50 520
+L 50 500" style="stroke-width:1;stroke:rgba(255,255,255,1.0);fill:rgba(222,165,132,1.0)"/><text x="80" y="514" style="stroke-width:0;stroke:none;fill:rgba(0,0,0,1.0);font-size:15.3px;font-family:'Roboto Medium',sans-serif">Rust 100.0%</text></svg>
