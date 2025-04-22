@@ -10,7 +10,7 @@ This is a collection of the questions I've solved. You can check how I solve the
 <img src="./analyzed/test_user_stats/images/go_chart_left_legend.svg" width="500" />
 
 - [Mermaid Chart Example](./analyzed/test_user_stats/mds/mermaid_chart.md)
-- [Files Analyzed](./analyzed/test_user_stats/mds/mermaid_chart.md)
+- [Files Analyzed](./analyzed/test_user_stats/mds/files.md)
 
 ### Other Analyzed Files
 
